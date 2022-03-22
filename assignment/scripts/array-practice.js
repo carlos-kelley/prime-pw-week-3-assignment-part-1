@@ -80,20 +80,29 @@ console.log('The animals are now', animalArray);
 //     log both the food removed and the updated array
 removedFood = foodArray.shift();
 console.log('Removed the first food', removedFood);
-console.log('The foodss are now', foodArray);
+console.log('The foods are now', foodArray);
 // 4.e (STRETCH) TODO: Replace the second food in your array
 //      with another one of your favorite foods.
 //      Then log the updated array.
+foodArray.splice(1,1,'avocado');
+console.log(foodArray);
 
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
-
+foodArray.sort();
+foodArray.reverse();
+console.log(foodArray);
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
+let statement = foodArray.toString();
+let regex = /,/g;
+console.log(statement.replace(regex, ' and '));
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+let mergeArray = animalArray.concat(foodArray);
+console.log(mergeArray);
